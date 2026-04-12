@@ -808,8 +808,21 @@ footer .ft {
   document.getElementById('doneBtn').addEventListener('click', () => {
     closeModal();
     setTimeout(() => {
+      // Reset form
       document.getElementById('modalForm').style.display = 'block';
       document.getElementById('modalSuccess').style.display = 'none';
+      document.querySelector('input[placeholder="First & last"]').value = '';
+      document.querySelector('input[placeholder="Best way to reach you"]').value = '';
+      document.querySelector('textarea').value = '';
+      // Reset photo drop zone
+      document.getElementById('dzPreview').src = '';
+      document.getElementById('dzPreview').style.display = 'none';
+      document.getElementById('dzInner').style.display = 'block';
+      document.getElementById('dropZone').classList.remove('filled');
+      // Reset submit button
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.textContent = 'Send for Review';
+      submitBtn.disabled = false;
     }, 400);
   });
 </script>
