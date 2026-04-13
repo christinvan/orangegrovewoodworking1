@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // ── Hamburger menu ──
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -150,3 +151,4 @@ const heroPhotoZone = document.getElementById('heroPhotoZone');
       submitBtn.disabled = false;
     }, 400);
   });
+});
