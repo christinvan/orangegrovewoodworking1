@@ -315,7 +315,7 @@
 
     <div class="info-block">
       <p class="info-label">Email</p>
-      <p class="info-value">info [at] orangegrovewoodworking.com</p>
+      <p class="info-value">info@orangegrovewoodworking.com</p>
       <p class="info-note">Best for estimates, photos, and questions.</p>
     </div>
 
@@ -337,7 +337,7 @@
 </footer>
 
 </div><!-- /site-frame -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script src="script.js"></script>
 <script>
   document.getElementById('contactSubmitBtn').addEventListener('click', async () => {
     const name = document.getElementById('c-name').value;
@@ -359,10 +359,4 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, contact, service, message })
-      });
-
-      if (response.ok) {
-        document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('contactSuccess').style.display = 'block';
-      } else {
-        alert('Something went wrong. Please try again
+      })
